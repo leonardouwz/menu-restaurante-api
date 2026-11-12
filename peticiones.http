@@ -1,0 +1,25 @@
+### Listar todos los platos
+GET http://localhost:8080/api/platos
+
+### Buscar un plato por id
+GET http://localhost:8080/api/platos/1
+
+### Crear un plato
+POST http://localhost:8080/api/platos
+Content-Type: application/json
+
+{
+  "nombre": "Aji de gallina",
+  "categoria": "Fondo",
+  "precio": 25.0,
+  "disponible": true
+}
+
+### Crear un plato inválido (devuelve 400)
+POST http://localhost:8080/api/platos
+Content-Type: application/json
+
+{
+  "nombre": "",
+  "precio": -5
+}
